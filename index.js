@@ -28,7 +28,7 @@ const io = require("socket.io")( process.env.PORT || 8900, {
     //io.emit("welcome","Welcome to socket server") ; // T send this to all the users
     socket.on("addUser",userId=>{
         console.log("Added an user") ;
-    addUser(userId,socket.Id) ;
+    addUser(userId,socket.id) ;
     io.emit("getUsers",users) ;
     })
     socket.on("disconnect",()=>{
